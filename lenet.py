@@ -10,7 +10,7 @@ class C1(nn.Module):
                       kernel_size=(5, 5),
                       stride=1,
                       padding=2),
-            nn.Tanh()
+            nn.LeakyReLU()
         ])
 
     def forward(self, x):
@@ -37,7 +37,7 @@ class C3(nn.Module):
                       kernel_size=(5, 5),
                       stride=1,
                       padding=0),
-            nn.Tanh()
+            nn.LeakyReLU()
         ])
 
     def forward(self, x):
@@ -73,7 +73,7 @@ class F6(nn.Module):
         super().__init__()
         self.f6 = nn.Sequential(*[
             nn.Linear(in_features=120, out_features=84),
-            nn.Tanh()
+            nn.LeakyReLU()
         ])
 
     def forward(self, x):
