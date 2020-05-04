@@ -21,7 +21,7 @@ class C1(nn.Module):
 class S2(nn.Module):
     def __init__(self):
         super().__init__()
-        self.s2 = nn.AvgPool2d((2, 2), stride=2)
+        self.s2 = nn.MaxPool2d((2, 2), stride=2)
 
     def forward(self, x):
         x = self.s2(x)
@@ -48,7 +48,7 @@ class C3(nn.Module):
 class S4(nn.Module):
     def __init__(self):
         super().__init__()
-        self.s4 = nn.AvgPool2d((2, 2), stride=2)
+        self.s4 = nn.MaxPool2d((2, 2), stride=2)
 
     def forward(self, x):
         x = self.s4(x)
