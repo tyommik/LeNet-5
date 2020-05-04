@@ -107,5 +107,6 @@ class LeNet(nn.Module):
         return x
 
     def inference(self, x):
+        x = self.forward(x)
         x = self.sm(x)
         return x
